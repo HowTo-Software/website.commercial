@@ -246,13 +246,6 @@
     });
 
     window.hts = {
-        projectIndexCanActivate(source, triggerId) {
-            const trigger = document.getElementById(triggerId);
-            // Compact layouts expand on click/tap, never on incidental mouse hover.
-            if (source === "hover") return finePointer.matches && window.matchMedia("(min-width: 851px)").matches
-                && trigger?.closest(".project-index-row")?.matches(":hover") === true;
-            return trigger === document.activeElement && trigger?.matches(":focus-visible") === true;
-        },
         focusInvalidForm() {
             const invalid = document.querySelector("#quote .invalid, #quote [aria-invalid='true']");
             if (invalid) {

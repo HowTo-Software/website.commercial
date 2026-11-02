@@ -142,13 +142,11 @@
   <data name="ProjectMarksHeadline" xml:space="preserve"><value>Por amor al juego.</value></data>
   <data name="ProjectUnorthodoxHeadline" xml:space="preserve"><value>El arte es supervivencia.</value></data>
   <data name="ProjectLinkturaHeadline" xml:space="preserve"><value>Creadores y marcas, conectados.</value></data>
-  <data name="ProjectLegacyHeadline" xml:space="preserve"><value>Ingeniería hecha para durar.</value></data>
   <data name="ProjectHowtoDescription" xml:space="preserve"><value>Nuestra propia publicación, reconstruida desde cero en ASP.NET Core 10 y SQL Server: artículos, membresías, suscripciones con Stripe, boletines y comentarios, con un panel de administración en Blazor que sustituye la instalación original de Ghost.</value></data>
   <data name="ProjectHostingDescription" xml:space="preserve"><value>Una tienda de servidores de juegos en .NET 10 y Blazor: el visitante elige el juego y el plan, paga con Stripe y recibe un servidor aprovisionado automáticamente mediante Pterodactyl en hardware propio, con pruebas verificadas de 24 horas.</value></data>
   <data name="ProjectMarksDescription" xml:space="preserve"><value>Un espacio editorial para la colección Topps 1991 de Mark, con anuncios de venta en vivo, Stripe Checkout y herramientas de inventario para el personal, en inglés, portugués y español, con temas claro y oscuro.</value></data>
   <data name="ProjectUnorthodoxDescription" xml:space="preserve"><value>Un espacio para la producción creativa y el apoyo a artistas: reserva de sesiones de estudio, comunidad de artistas y clases y talleres semanales, con accesos separados para miembros y personal.</value></data>
   <data name="ProjectLinkturaDescription" xml:space="preserve"><value>Una plataforma de afiliados que conecta creadores y marcas: panel en Blazor con inicio de sesión seguro, integración con Shopify, pagos con Stripe y liquidaciones en SQL Server, desplegada como cuatro servicios coordinados.</value></data>
-  <data name="ProjectLegacyDescription" xml:space="preserve"><value>Un nuevo sitio en desarrollo: portafolio de ingeniería con recepción confidencial de ideas y un CMS con control por roles, construido con Next.js, una API en ASP.NET Core y SQL Server. El dominio ya está en línea mientras se completa el sitio.</value></data>
   <data name="CreateYours" xml:space="preserve"><value>Crear mi sitio</value></data>
   <data name="ServicesTitleSecond" xml:space="preserve"><value>una solución.</value></data>
   <data name="ChooseService" xml:space="preserve"><value>Esto es lo que necesito</value></data>

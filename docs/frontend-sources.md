@@ -1,12 +1,22 @@
 # Frontend HTS — fontes e adaptações
 
+## Project gallery restored — Unreleased
+
+**Current catalog / Catálogo atual:** five projects / cinco projetos: HowToSoftware, HTS Game Hosting, Mark's Baseball Cards, Unorthodox Ways and Linktura. Legacy Asset Group was removed from the public portfolio at the owner's request following the end of the affiliation / foi removido da vitrine a pedido do responsável após o encerramento do vínculo. Its public card, URL, details, project-specific translations and unused palette were removed; historical implementation records below are retained as history, not current client claims.
+
+**English:** the portfolio once again follows the supplied screenshot: a two-column gallery with tilted miniature-browser previews, neutral backgrounds, project captions and circular external links. It uses the existing local captures and brand fallbacks, not iframes or a new image service. Mobile switches to a single column, and the frames grow with translated content to prevent clipping. Filters, native details dialogs, safe external links, quotation prefill, themes, languages and motion preferences remain available. The index-only selection/hover helper and obsolete layout styles were removed; the rest of the page is unchanged. This supersedes the interactive-index layout described below.
+
+**PT-BR:** o portfólio volta ao modelo da imagem de referência: grade de duas colunas, prévias de navegador inclinadas, fundos neutros, legenda do projeto e link externo circular. São reutilizadas as capturas locais e alternativas de marca, sem iframes ou novo serviço de imagens. No celular, a grade passa para uma coluna e as molduras crescem com o conteúdo traduzido, evitando cortes. Filtros, diálogos nativos de detalhes, links externos seguros, preenchimento do orçamento, temas, idiomas e preferências de movimento continuam disponíveis. Foram removidos a seleção/hover exclusivos do índice e seus estilos obsoletos; o restante da página permanece igual. Esta alteração substitui o layout de índice descrito abaixo.
+
+**Local verification / Verificação local:** Release build with warnings treated as errors passed with zero warnings/errors; JavaScript syntax, localization consistency (349 keys per language) and `git diff --check` passed. Playwright with local headless Chrome passed 21 check groups, including 42 layouts (PT-BR/EN/ES × light/dark × 320, 390, 600, 768, 850, 1280 and 1440 CSS pixels). Checks cover the five-project catalog and absence of Legacy Asset Group in rendered content, filter results/counts, screenshot/brand fallbacks, details, Escape/focus return, keyboard/touch input, reduced motion, safe external-link attributes and absence of normal-session browser/console/local HTTP errors. Reports and screenshots remain in ignored `artifacts/`; these are local results, not a committed CI test suite, cross-browser certification, remote-site availability check or production deployment.
+
 ## Appearance preferences — Unreleased
 
 **English:** `AppearanceMenu.razor` groups theme and animation actions in a compact native disclosure in the existing header. The hero and capabilities band no longer contain separate animation buttons. Both actions have localized visible labels and comfortable touch targets; Escape returns focus to the trigger, and outside clicks/focus departure close the panel. Existing storage persistence, storage-failure fallback and OS reduced-motion priority remain active. Local Playwright checks covered behavior and 48 open-panel layouts across three languages, two themes and eight widths, plus a project-index regression check. These are local browser results. The requester accepted the preview and authorized publication for pull-request review and later merge; production deployment remains a separate step.
 
 **PT-BR:** `AppearanceMenu.razor` reúne tema e animações em um menu nativo compacto no cabeçalho existente. O hero e a faixa de capacidades deixam de ter botões de animação separados. As duas ações têm textos visíveis traduzidos e áreas de toque confortáveis; Escape devolve o foco ao acionador, e cliques ou foco fora fecham o painel. Permanecem a preferência salva, o funcionamento sem armazenamento e a prioridade de movimento reduzido do sistema. Verificações locais com Playwright cobriram o comportamento e 48 layouts com painel aberto em três idiomas, dois temas e oito larguras, além de uma regressão do índice de projetos. São resultados locais de navegador. O solicitante aceitou a prévia e autorizou a publicação para revisão em pull request e merge posterior; a implantação em produção permanece uma etapa separada.
 
-## Interactive project index — Unreleased
+## Interactive project index — Historical implementation, superseded
 
 **English:** the user-supplied `hts-interactive-index.html` is the portfolio's visual/interaction reference, adapted to the existing Blazor site rather than published as a standalone page. The existing six projects, categories, URLs, real screenshots and brand fallbacks are preserved. No illustrative site captures, new runtime libraries or unrelated page redesign are introduced. See the complete [implementation notes](phase-2-design/interactive-project-index.md).
 
@@ -52,13 +62,13 @@ Para substituir a implementação por uma adaptação do código original, será
 - Menu mobile usa details, fecha após navegar, ao clicar fora e com Escape.
 - Cabeçalho oferece PT-BR, EN e ES. Traduções incluem conteúdo, mensagens de validação, metadados e download do briefing. A escolha fica em cookie e a troca preserva a seção atual.
 - Tema claro e black com escolha salva no navegador. theme.js aplica a preferência no head, antes do CSS, e atualiza o rótulo do botão no idioma selecionado.
-- Tilt discreto nas prévias do hero e do índice de projetos, somente com ponteiro fino e respeitando as preferências de movimento.
+- Tilt discreto no hero e inclinação das miniaturas da galeria no hover/foco, respeitando pausa e movimento reduzido.
 - As entradas respeitam prefers-reduced-motion. O conteúdo permanece visível quando o JavaScript não carrega.
 - interactions.js também observa os componentes inseridos por atualizações do Blazor e remove observações dos elementos desmontados.
 
 ## Assets e fontes
 
-As imagens já incluídas no projeto foram reaproveitadas. A seção "Ideas in action" (Possibilidades na prática) apresenta sites reais em operação nos servidores da HTS. As imagens `wwwroot/images/project-*.webp` são capturas das páginas iniciais desses sites (1440×900, outubro de 2026). Linktura e Legacy Asset Group usam monogramas, porque a página pública é login ou provisória. As imagens conceituais antigas de oficina, segurança e consultoria foram removidas; `project-construction.png` continua no hero.
+As imagens já incluídas no projeto foram reaproveitadas. A seção "Ideas in action" (Possibilidades na prática) apresenta os cinco projetos do catálogo atual. As imagens `wwwroot/images/project-*.webp` são capturas das páginas iniciais desses sites (1440×900, outubro de 2026). Linktura usa uma prévia de marca, porque a página pública é um login. As imagens conceituais antigas de oficina, segurança e consultoria foram removidas; `project-construction.png` continua no hero.
 
 Fonte Manrope variável hospedada localmente, obtida do [repositório oficial Google Fonts](https://github.com/google/fonts/tree/main/ofl/manrope). Licença SIL Open Font License em wwwroot/fonts/OFL.txt. Nenhum CDN é necessário em tempo de execução.
 
