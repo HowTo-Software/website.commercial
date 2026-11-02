@@ -11,47 +11,12 @@
             {
                 <button type="button" data-project-filter="@filter.Value" class="@(_filter == filter.Value ? "is-active" : "")" aria-pressed="@(_filter == filter.Value ? "true" : "false")" @onclick="() => SelectFilter(filter.Value)">@L[filter.Label]<span>@Projects.Count(p => filter.Value == "all" || p.Category == filter.Value).ToString("00", CultureInfo.InvariantCulture)</span></button>
             }
-            <span class="filter-caption"><UiIcon Name="diagonal" />@L["ProjectExploreHint"]</span>
+            <span class="filter-caption">@L["SelectedWork"] / 2026</span>
         </div>
-        <div class="project-index-layout" data-tilt data-reveal>
-            <div class="project-index-column">
-                <div class="project-index-head"><span>@L["ProjectIndexTitle"]</span><span>@_visibleProjects.Length.ToString("00", CultureInfo.InvariantCulture) / @L["SelectedWork"]</span></div>
-                <div class="project-index-list">
-                    @foreach (var project in _visibleProjects)
-                    {
-                        <ProjectCard @key="project.Index" Project="project" Active="@(project.Index == _selectedIndex)" Selected="SelectProject" />
-                    }
-                </div>
-                <div class="project-index-foot"><span>HTS / @L["NavProjects"]</span><span>@L["ProjectIndexHint"]</span></div>
-            </div>
-            @if (ActiveProject is { } active)
+        <div class="projects-grid" aria-live="polite" aria-atomic="false">
+            @foreach (var project in _visibleProjects)
             {
-                <aside id="project-preview" class="project-preview-area" aria-label="@L["ProjectPreviewLabel"]">
-                    <div class="project-preview-head"><span>@L["ProjectPreviewLabel"]</span><span><b>@SelectionNumber</b> / @_visibleProjects.Length.ToString("00", CultureInfo.InvariantCulture)</span></div>
-                    <div class="project-preview-frame">
-                        <div class="project-preview-stage">
-                            @foreach (var project in _visibleProjects)
-                            {
-                                <div @key="project.Index" class="project-preview-slide @(project.Index == _selectedIndex ? "is-active" : "")" aria-hidden="@(project.Index == _selectedIndex ? "false" : "true")" data-preview-id="@project.Index">
-                                    <ProjectPreview Project="project" />
-                                </div>
-                            }
-                        </div>
-                    </div>
-                    <div class="project-preview-info">
-                        <div class="project-preview-copy" @key="active.Index">
-                            <span class="project-preview-status">@L[active.Status]</span>
-                            <h3>@active.Title</h3>
-                            <p>@L[active.Description]</p>
-                            <button type="button" class="animated-link" data-open-dialog="@active.DialogId" aria-haspopup="dialog">@L["ViewProject"] <UiIcon Name="diagonal" /></button>
-                        </div>
-                        <div class="project-preview-nav">
-                            <button type="button" class="circle-button project-previous" aria-label="@L["PreviousProject"]" @onclick="() => StepSelection(-1)"><UiIcon Name="arrow" /></button>
-                            <button type="button" class="circle-button project-next" aria-label="@L["NextProject"]" @onclick="() => StepSelection(1)"><UiIcon Name="arrow" /></button>
-                        </div>
-                    </div>
-                </aside>
-                <p class="visually-hidden" role="status">@L["ProjectSelectionStatus", active.Title, SelectionNumber, _visibleProjects.Length]</p>
+                <ProjectCard @key="(project.Index, _filter)" Project="project" RevealDelay="@((int.Parse(project.Index, CultureInfo.InvariantCulture) - 1) % 2 * 90)" />
             }
         </div>
         <div class="projects-bottom" data-reveal><span>@L["ProjectsBottom"]</span><a class="animated-link" href="#quote">@L["CreateYours"] <UiIcon Name="diagonal" /></a></div>
@@ -59,10 +24,7 @@
 </section>
 @code {
     private string _filter = "all";
-    private string _selectedIndex = "01";
     private PortfolioProject[] _visibleProjects = Projects;
-    private PortfolioProject? ActiveProject => _visibleProjects.FirstOrDefault(project => project.Index == _selectedIndex);
-    private string SelectionNumber => (Array.FindIndex(_visibleProjects, project => project.Index == _selectedIndex) + 1).ToString("00", CultureInfo.InvariantCulture);
     private static readonly (string Value, string Label)[] Filters = [("all", "FilterAll"), ("platform", "FilterPlatforms"), ("commerce", "FilterCommerce"), ("community", "FilterCommunities")];
 
     // Preserve the existing live-project catalog; unavailable screenshots use honest brand previews.
@@ -76,29 +38,13 @@
         new("04", "Unorthodox Ways", "UNORTHODOX WAYS", "https://unorthodox-ways.com/", "images/project-unorthodox-ways.webp", "ProjectUnorthodoxAlt", "UW",
             "ProjectTypeCommunity", "ProjectUnorthodoxDescription", "ProjectUnorthodoxHeadline", "ProjectStatusLive", "theme-ember", "community", "business"),
         new("05", "Linktura", "linktura", "https://linktura.org/", null, null, "L",
-            "ProjectTypeAffiliate", "ProjectLinkturaDescription", "ProjectLinkturaHeadline", "ProjectStatusSignIn", "theme-teal", "platform", "custom"),
-        new("06", "Legacy Asset Group", "LEGACY ASSET GROUP", "https://legacy-asset-group.com/", null, null, "LAG",
-            "ProjectTypePortfolio", "ProjectLegacyDescription", "ProjectLegacyHeadline", "ProjectStatusInDevelopment", "theme-sage", "community", "business")
+            "ProjectTypeAffiliate", "ProjectLinkturaDescription", "ProjectLinkturaHeadline", "ProjectStatusSignIn", "theme-teal", "platform", "custom")
     ];
-
-    private void SelectProject(string index)
-    {
-        if (_visibleProjects.Any(project => project.Index == index)) _selectedIndex = index;
-    }
 
     private void SelectFilter(string filter)
     {
         if (!Filters.Any(item => item.Value == filter)) return;
         _filter = filter;
         _visibleProjects = Projects.Where(project => filter == "all" || project.Category == filter).ToArray();
-        if (!_visibleProjects.Any(project => project.Index == _selectedIndex))
-            _selectedIndex = _visibleProjects.FirstOrDefault()?.Index ?? string.Empty;
-    }
-
-    private void StepSelection(int direction)
-    {
-        if (_visibleProjects.Length == 0) return;
-        var position = Array.FindIndex(_visibleProjects, project => project.Index == _selectedIndex);
-        _selectedIndex = _visibleProjects[(position + direction + _visibleProjects.Length) % _visibleProjects.Length].Index;
     }
 }

@@ -142,13 +142,11 @@
   <data name="ProjectMarksHeadline" xml:space="preserve"><value>For the love of the game.</value></data>
   <data name="ProjectUnorthodoxHeadline" xml:space="preserve"><value>Art is survival.</value></data>
   <data name="ProjectLinkturaHeadline" xml:space="preserve"><value>Creators and brands, connected.</value></data>
-  <data name="ProjectLegacyHeadline" xml:space="preserve"><value>Engineering, built to last.</value></data>
   <data name="ProjectHowtoDescription" xml:space="preserve"><value>Our own publication, rebuilt from scratch on ASP.NET Core 10 and SQL Server: posts, memberships, Stripe subscriptions, newsletters and comments, with a Blazor admin panel replacing the original Ghost install.</value></data>
   <data name="ProjectHostingDescription" xml:space="preserve"><value>A game-server storefront on .NET 10 and Blazor: visitors pick a game and a plan, pay with Stripe and receive a server provisioned automatically through Pterodactyl on hardware we own, with verified 24-hour trials.</value></data>
   <data name="ProjectMarksDescription" xml:space="preserve"><value>An editorial home for Mark's 1991 Topps collection with live sale listings, Stripe Checkout and staff inventory tools, in English, Portuguese and Spanish with light and dark themes.</value></data>
   <data name="ProjectUnorthodoxDescription" xml:space="preserve"><value>A home for creative production and artist support: studio session booking, an artist community and weekly classes and workshops, with separate member and staff access.</value></data>
   <data name="ProjectLinkturaDescription" xml:space="preserve"><value>An affiliate platform connecting creators and brands: a Blazor dashboard with secure sign-in, a Shopify integration, Stripe payments and SQL Server settlement, deployed as four coordinated services.</value></data>
-  <data name="ProjectLegacyDescription" xml:space="preserve"><value>A new site in development: an engineering portfolio with confidential idea intake and a role-based CMS, built with Next.js, an ASP.NET Core API and SQL Server. The domain is already live while the full site is completed.</value></data>
   <data name="CreateYours" xml:space="preserve"><value>Create my website</value></data>
   <data name="ServicesTitleSecond" xml:space="preserve"><value>its own solution.</value></data>
   <data name="ChooseService" xml:space="preserve"><value>This is what I need</value></data>

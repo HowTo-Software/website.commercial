@@ -1,6 +1,8 @@
 # Interactive project index
 
-Status: Unreleased; local preview accepted by the requester and prepared for pull-request review. Production deployment is not recorded by this document.
+Status: Superseded by the restored miniature-browser project gallery. The text below records the previous index implementation and its historical verification, not the current interface. See [current frontend notes](../frontend-sources.md#project-gallery-restored--unreleased). Production deployment is not recorded by this document.
+
+**PT-BR:** substituído pela galeria de projetos com miniaturas de navegador. O texto abaixo registra a implementação anterior e sua verificação histórica, não a interface atual.
 
 ## English
 

@@ -44,7 +44,7 @@ The application currently has **no request-delivery API, database, email deliver
 - Expandable services covering websites, business sites, landing pages, custom systems, maintenance, backend, hosting and consultancy.
 - PT-BR, EN and ES interface and validation resources. Culture preference uses a cookie; theme preference uses browser storage.
 - Responsive navigation, active-section indicator, scroll progress and reduced-motion support.
-- "Ideas in action" showcases six live sites on HTS servers: howtoosoftware.com, host.howto.software, marks-baseballcards.com, unorthodox-ways.com, linktura.org and legacy-asset-group.com. Each card links to the live site and uses a homepage screenshot, or a branded monogram where the public page is a sign-in screen or a placeholder. Screenshots are refreshed manually.
+- "Ideas in action" showcases five sites: howtoosoftware.com, host.howto.software, marks-baseballcards.com, unorthodox-ways.com and linktura.org. The original two-column miniature-browser cards link to each site and use local homepage screenshots, or a branded preview for Linktura's sign-in page. Screenshots are refreshed manually.
 
 ## Motion refinement — Unreleased
 

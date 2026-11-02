@@ -11,7 +11,7 @@
 - English-first documentation with PT-BR guidance and a Portuguese README.
 - Motion-refinement scope: subtle hero float/decorative accents, capabilities marquee, service-art orbits, staged entrances and wizard-step transitions, with no additional animation dependency. / Escopo do refinamento: hero suave, faixa de capacidades, órbitas decorativas, entradas graduais e transições entre etapas.
 - GitHub Actions CI (Release build with warnings as errors, localization key check, publish artifact, Docker image smoke test) and CD to the Docker host `192.168.1.206:/opt/hts-commercial-website` through the self-hosted runner `192.168.1.210`, with automatic rollback. The site is published as `howto.software` through Caddy. See [CI/CD](docs/phase-5-deployment/ci-cd.md). / CI no GitHub Actions e CD com Docker para `192.168.1.206` via runner `192.168.1.210`, com rollback automático e publicação em `howto.software` via Caddy.
-- "Ideas in action" now shows six live sites hosted on HTS servers instead of fictional concepts: HowToSoftware, HTS Game Hosting, Mark's Baseball Cards, Unorthodox Ways, Linktura and Legacy Asset Group. It uses homepage screenshots or branded monograms, live-site links, a status label (live, sign-in, in development) and new filters (platforms, commerce, brands and communities). / "Possibilidades na prática" agora mostra seis sites reais hospedados pela HTS, com capturas ou monogramas, links, status e novos filtros.
+- "Ideas in action" shows five projects instead of fictional concepts: HowToSoftware, HTS Game Hosting, Mark's Baseball Cards, Unorthodox Ways and Linktura. It uses homepage screenshots or branded previews, site links, live/sign-in status labels and category filters. / "Possibilidades na prática" mostra cinco projetos, com capturas ou prévias de marca, links, status e filtros por categoria.
 - Persistent animation pause/resume, operating-system reduced-motion priority, offscreen/hidden-tab suspension and marquee hover/focus pause. Repetitions remain decorative; static content remains available. / Pausa persistida, prioridade à redução de movimento, suspensão fora da área visível/em abas ocultas e pausa da faixa no hover/foco.
 
 ### Local verification / Verificação local
@@ -25,6 +25,10 @@
 - Existing preview files, source records and asset attribution.
 
 ### Fixed / Corrigido
+
+- Removed Legacy Asset Group from the public portfolio following the end of the affiliation, including its link, details, localized project copy and unused palette. The other five projects remain. / Removido Legacy Asset Group da vitrine após o encerramento do vínculo, incluindo link, detalhes, textos traduzidos e paleta sem uso. Os outros cinco projetos permanecem.
+
+- Restored the original two-column miniature-browser project cards from the supplied reference, with neutral backgrounds, captions and external links. Filters, details, quotation prefill and appearance preferences are preserved; compact previews grow to avoid translated-content clipping. Removed index-only selection/hover code and obsolete styles. / Restaurada a grade original de cards com miniaturas de navegador conforme a referência, mantendo filtros, detalhes, orçamento e preferências visuais, sem cortes de conteúdo traduzido no celular.
 
 - Preview-mode and project-filter controls render explicit `aria-pressed` values. / Controles da prévia e filtros informam explicitamente seu estado acessível.
 - The hero observes a stable parent so changing desktop/mobile preview does not remove viewport motion state. / A cena do hero usa um pai estável para manter o estado de movimento ao trocar a prévia.
