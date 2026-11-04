@@ -136,16 +136,13 @@
   <data name="ProjectHowtoAlt" xml:space="preserve"><value>HowToSoftware homepage with featured posts</value></data>
   <data name="ProjectHostingAlt" xml:space="preserve"><value>HTS game hosting homepage with the Project Zomboid plan</value></data>
   <data name="ProjectMarksAlt" xml:space="preserve"><value>Mark's Baseball Cards homepage with the 1991 collection</value></data>
-  <data name="ProjectUnorthodoxAlt" xml:space="preserve"><value>Unorthodox Ways homepage</value></data>
   <data name="ProjectHowtoHeadline" xml:space="preserve"><value>Thoughts, stories and ideas.</value></data>
   <data name="ProjectHostingHeadline" xml:space="preserve"><value>Choose your game.</value></data>
   <data name="ProjectMarksHeadline" xml:space="preserve"><value>For the love of the game.</value></data>
-  <data name="ProjectUnorthodoxHeadline" xml:space="preserve"><value>Art is survival.</value></data>
   <data name="ProjectLinkturaHeadline" xml:space="preserve"><value>Creators and brands, connected.</value></data>
   <data name="ProjectHowtoDescription" xml:space="preserve"><value>Our own publication, rebuilt from scratch on ASP.NET Core 10 and SQL Server: posts, memberships, Stripe subscriptions, newsletters and comments, with a Blazor admin panel replacing the original Ghost install.</value></data>
   <data name="ProjectHostingDescription" xml:space="preserve"><value>A game-server storefront on .NET 10 and Blazor: visitors pick a game and a plan, pay with Stripe and receive a server provisioned automatically through Pterodactyl on hardware we own, with verified 24-hour trials.</value></data>
   <data name="ProjectMarksDescription" xml:space="preserve"><value>An editorial home for Mark's 1991 Topps collection with live sale listings, Stripe Checkout and staff inventory tools, in English, Portuguese and Spanish with light and dark themes.</value></data>
-  <data name="ProjectUnorthodoxDescription" xml:space="preserve"><value>A home for creative production and artist support: studio session booking, an artist community and weekly classes and workshops, with separate member and staff access.</value></data>
   <data name="ProjectLinkturaDescription" xml:space="preserve"><value>An affiliate platform connecting creators and brands: a Blazor dashboard with secure sign-in, a Shopify integration, Stripe payments and SQL Server settlement, deployed as four coordinated services.</value></data>
   <data name="CreateYours" xml:space="preserve"><value>Create my website</value></data>
   <data name="ServicesTitleSecond" xml:space="preserve"><value>its own solution.</value></data>

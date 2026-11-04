@@ -136,16 +136,13 @@
   <data name="ProjectHowtoAlt" xml:space="preserve"><value>Página inicial do HowToSoftware com posts em destaque</value></data>
   <data name="ProjectHostingAlt" xml:space="preserve"><value>Página inicial da hospedagem de jogos HTS com o plano de Project Zomboid</value></data>
   <data name="ProjectMarksAlt" xml:space="preserve"><value>Página inicial do Mark's Baseball Cards com a coleção de 1991</value></data>
-  <data name="ProjectUnorthodoxAlt" xml:space="preserve"><value>Página inicial do Unorthodox Ways</value></data>
   <data name="ProjectHowtoHeadline" xml:space="preserve"><value>Pensamentos, histórias e ideias.</value></data>
   <data name="ProjectHostingHeadline" xml:space="preserve"><value>Escolha seu jogo.</value></data>
   <data name="ProjectMarksHeadline" xml:space="preserve"><value>Por amor ao jogo.</value></data>
-  <data name="ProjectUnorthodoxHeadline" xml:space="preserve"><value>Arte é sobrevivência.</value></data>
   <data name="ProjectLinkturaHeadline" xml:space="preserve"><value>Criadores e marcas, conectados.</value></data>
   <data name="ProjectHowtoDescription" xml:space="preserve"><value>Nossa própria publicação, reconstruída do zero em ASP.NET Core 10 e SQL Server: posts, assinaturas de membros, pagamentos recorrentes com Stripe, newsletters e comentários, com um painel administrativo em Blazor no lugar da instalação original do Ghost.</value></data>
   <data name="ProjectHostingDescription" xml:space="preserve"><value>Uma loja de servidores de jogos em .NET 10 e Blazor: o visitante escolhe o jogo e o plano, paga com Stripe e recebe um servidor provisionado automaticamente via Pterodactyl em hardware próprio, com testes verificados de 24 horas.</value></data>
   <data name="ProjectMarksDescription" xml:space="preserve"><value>Uma vitrine editorial para a coleção Topps 1991 do Mark, com anúncios de venda ao vivo, Stripe Checkout e ferramentas de estoque para a equipe, em inglês, português e espanhol, com temas claro e escuro.</value></data>
-  <data name="ProjectUnorthodoxDescription" xml:space="preserve"><value>Um espaço para produção criativa e apoio a artistas: reserva de sessões de estúdio, comunidade de artistas e aulas e workshops semanais, com acessos separados para membros e equipe.</value></data>
   <data name="ProjectLinkturaDescription" xml:space="preserve"><value>Uma plataforma de afiliados que conecta criadores e marcas: painel em Blazor com login seguro, integração com Shopify, pagamentos com Stripe e acertos financeiros em SQL Server, publicada como quatro serviços coordenados.</value></data>
   <data name="CreateYours" xml:space="preserve"><value>Criar o meu site</value></data>
   <data name="ServicesTitleSecond" xml:space="preserve"><value>uma solução.</value></data>
