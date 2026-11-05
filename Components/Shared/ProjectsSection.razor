@@ -7,7 +7,7 @@
             <p class="heading-aside" data-reveal>@L["ProjectsIntro"]</p>
         </div>
         <div class="project-filters" data-reveal role="group" aria-label="@L["FilterProjects"]">
-            @foreach (var filter in Filters)
+            @foreach (var filter in Filters.Where(item => item.Value == "all" || Projects.Any(project => project.Category == item.Value)))
             {
                 <button type="button" data-project-filter="@filter.Value" class="@(_filter == filter.Value ? "is-active" : "")" aria-pressed="@(_filter == filter.Value ? "true" : "false")" @onclick="() => SelectFilter(filter.Value)">@L[filter.Label]<span>@Projects.Count(p => filter.Value == "all" || p.Category == filter.Value).ToString("00", CultureInfo.InvariantCulture)</span></button>
             }
@@ -35,15 +35,13 @@
             "ProjectTypeHosting", "ProjectHostingDescription", "ProjectHostingHeadline", "ProjectStatusLive", "theme-night", "commerce", "custom"),
         new("03", "Mark's Baseball Cards", "mark's", "https://marks-baseballcards.com/", "images/project-marks-baseball-cards.webp", "ProjectMarksAlt", "’91",
             "ProjectTypeCollection", "ProjectMarksDescription", "ProjectMarksHeadline", "ProjectStatusLive", "theme-cards", "commerce", "website"),
-        new("04", "Unorthodox Ways", "UNORTHODOX WAYS", "https://unorthodox-ways.com/", "images/project-unorthodox-ways.webp", "ProjectUnorthodoxAlt", "UW",
-            "ProjectTypeCommunity", "ProjectUnorthodoxDescription", "ProjectUnorthodoxHeadline", "ProjectStatusLive", "theme-ember", "community", "business"),
         new("05", "Linktura", "linktura", "https://linktura.org/", null, null, "L",
             "ProjectTypeAffiliate", "ProjectLinkturaDescription", "ProjectLinkturaHeadline", "ProjectStatusSignIn", "theme-teal", "platform", "custom")
     ];
 
     private void SelectFilter(string filter)
     {
-        if (!Filters.Any(item => item.Value == filter)) return;
+        if (!Filters.Any(item => item.Value == filter) || (filter != "all" && !Projects.Any(project => project.Category == filter))) return;
         _filter = filter;
         _visibleProjects = Projects.Where(project => filter == "all" || project.Category == filter).ToArray();
     }

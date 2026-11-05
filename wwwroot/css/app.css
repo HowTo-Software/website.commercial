@@ -244,7 +244,6 @@ a:hover .rolling-layer-copy span, a:focus-visible .rolling-layer-copy span { tra
 .theme-violet { --mini-bg: #151826; --mini-ink: #e4e2f3; --mini-accent: #9585f7; }
 .theme-night { --mini-bg: #0f141b; --mini-ink: #eef0f6; --mini-accent: #b3bcff; }
 .theme-cards { --mini-bg: #f4f0e7; --mini-ink: #1f3442; --mini-accent: #b8402f; }
-.theme-ember { --mini-bg: #151112; --mini-ink: #efe6dd; --mini-accent: #c4505f; }
 .theme-teal { --mini-bg: #0f1a1c; --mini-ink: #e3f1ee; --mini-accent: #5fd0b8; }
 .project-dialog .project-preview-art { height: auto; }
 .project-dialog .project-preview-media { aspect-ratio: 16 / 10; }

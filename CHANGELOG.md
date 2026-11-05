@@ -11,7 +11,7 @@
 - English-first documentation with PT-BR guidance and a Portuguese README.
 - Motion-refinement scope: subtle hero float/decorative accents, capabilities marquee, service-art orbits, staged entrances and wizard-step transitions, with no additional animation dependency. / Escopo do refinamento: hero suave, faixa de capacidades, órbitas decorativas, entradas graduais e transições entre etapas.
 - GitHub Actions CI (Release build with warnings as errors, localization key check, publish artifact, Docker image smoke test) and CD to the Docker host `192.168.1.206:/opt/hts-commercial-website` through the self-hosted runner `192.168.1.210`, with automatic rollback. The site is published as `howto.software` through Caddy. See [CI/CD](docs/phase-5-deployment/ci-cd.md). / CI no GitHub Actions e CD com Docker para `192.168.1.206` via runner `192.168.1.210`, com rollback automático e publicação em `howto.software` via Caddy.
-- "Ideas in action" shows five projects instead of fictional concepts: HowToSoftware, HTS Game Hosting, Mark's Baseball Cards, Unorthodox Ways and Linktura. It uses homepage screenshots or branded previews, site links, live/sign-in status labels and category filters. / "Possibilidades na prática" mostra cinco projetos, com capturas ou prévias de marca, links, status e filtros por categoria.
+- "Ideas in action" shows four projects instead of fictional concepts: HowToSoftware, HTS Game Hosting, Mark's Baseball Cards and Linktura. It uses homepage screenshots or branded previews, site links, live/sign-in status labels and nonempty category filters. / "Possibilidades na prática" mostra quatro projetos, com capturas ou prévias de marca, links, status e filtros de categorias com projetos.
 - Persistent animation pause/resume, operating-system reduced-motion priority, offscreen/hidden-tab suspension and marquee hover/focus pause. Repetitions remain decorative; static content remains available. / Pausa persistida, prioridade à redução de movimento, suspensão fora da área visível/em abas ocultas e pausa da faixa no hover/foco.
 
 ### Local verification / Verificação local
@@ -25,6 +25,8 @@
 - Existing preview files, source records and asset attribution.
 
 ### Fixed / Corrigido
+
+- Removed Unorthodox Ways from the public portfolio at the owner's request, including its card, link, details, screenshot, localized copy and unused palette. Categories without projects are no longer offered. The other four projects and gallery layout remain unchanged. / Removido Unorthodox Ways da vitrine a pedido do responsável, incluindo card, link, detalhes, imagem, traduções e paleta sem uso. Categorias sem projetos deixam de aparecer. Os outros quatro projetos e o layout permanecem.
 
 - Removed Legacy Asset Group from the public portfolio following the end of the affiliation, including its link, details, localized project copy and unused palette. The other five projects remain. / Removido Legacy Asset Group da vitrine após o encerramento do vínculo, incluindo link, detalhes, textos traduzidos e paleta sem uso. Os outros cinco projetos permanecem.
 
